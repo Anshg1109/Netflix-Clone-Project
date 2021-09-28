@@ -1,247 +1,568 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 6% 5%;
+  z-index: 10;
+}
+
+.navbar__brand {
+  width: 100px;
+  height: 100%;
+}
+
+.brand__logo {
+  width: 100%;
+  height: 100%;
+}
+
+.language__drop__down {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 14px;
   
-  body {
-    background-color: black;
-    color: white;
-    font-family: "Poppins", sans-serif;
-  }
-  
-  .navbar {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 6% 5%;
-    z-index: 10;
-  }
-  
-  .navbar__brand {
-    width: 100px;
-    height: 100%;
-  }
-  
-  .brand__logo {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .language__drop__down {
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 14px;
-    
-  }
-  
-  .language__drop__down:focus {
-    outline: none;
-  }
-  
-  .dropdown__container {
-    border: 1px solid #aaa;
-    padding: 0.1rem 0.4rem;
-    border-radius: 3px;
-    background: rgba(0, 0, 0, 0.507);
-  }
-  
-  .signin__button {
-    background-color: #dc030f;
-    border: 1px solid #dc030f;
-    color: white;
-    padding: 0.25rem 0.5rem;
-    border-radius: 3px;
-    font-size: 14px;
-  }
-  
-  .navbar__nav__items {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .hero__bg__image__container {
-    width: 100%;
-    height: 80vh;
-  }
-  
-  .hero__bg__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .hero__bg__overlay {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 80vh;
-    background: rgba(0, 0, 0, 0.4);
-    background-image: linear-gradient( to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100% );
-  }
-  
-  .hero__card {
-    position: absolute;
-    top: 20%;
-    text-align: center;
+}
+
+.language__drop__down:focus {
+  outline: none;
+}
+
+.dropdown__container {
+  border: 1px solid #aaa;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.507);
+}
+
+.signin__button {
+  background-color: #dc030f;
+  border: 1px solid #dc030f;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.navbar__nav__items {
+  display: flex;
+  gap: 10px;
+}
+
+.hero__bg__image__container {
+  width: 100%;
+  height: 80vh;
+}
+
+.hero__bg__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__bg__overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 80vh;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient( to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100% );
+}
+
+.hero__card {
+  position: absolute;
+  top: 20%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* width: 100%; */
+
+}
+
+.hero__title {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.hero__subtitle,
+.hero__description {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.hero__description{
+    margin: 0px 50px;
+}
+.email-form-container{
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    /* width: 100%; */
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 
-  }
+}
+.email-input{
+    border: none;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    padding-left: 7px;
+    
+}
+
+.form-container{
+    position: relative;
+    background-color: white;
+    width: 90%;
+    height: 50px;
+
+}
+
+.email-label{
+    position: absolute;
+    color: black;
+    left: 2%;
+    top: 28%;
+    color: rgb(153, 149, 149);  
+    transition: 0.5s;
+}
+
+.primary-button{
+  background-color: #dc030f;
+  border: 1px solid #dc030f;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 2px;
+  font-size: 16px;
+  letter-spacing: 1px;
   
-  .hero__title {
+}
+
+.email-input:focus + .email-label{
+    top: 0.2rem;
+    font-size: 10px;
+}
+
+.email-input:not(:placeholder-shown).email-input:not(:focus)+.email-label{
+  top: 0.2rem;
+  font-size: 10px;
+}
+
+.email-input:focus-visible{
+    outline: none;
+}
+
+.feature{
+  border-top: 8px solid #222;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+/* .feature-details{
+    
+} */
+
+.feature-title{
     font-weight: 600;
-    font-size: 2rem;
-  }
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.feature-subtitle{
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.feature-image-container{
+  width: 100%;
+  position: relative;
+
+}
+
+.feature-image{
+  width: 100%;
+}
+
+.feature-background-video-container{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 73%;
+  max-height: 54%;
+  top: 20%;
+  left: 13.5%;
+  z-index: -2;
+}
+
+.feature-background-video{
+  width: 100%;
+}
+
+.feature2-poster-container{
+  position: absolute;
+ bottom: 8%;
+ left: 50%;
+ transform: translateX(-50%);
+ width: 100%;
+ max-width: 16em;
+ display: flex;
+ align-items: center;
+ background-color: black;
+ border: 2px solid rgba(255, 255, 255, 0.25);
+ border-radius: 10px;
+ height: 60px;
+ padding: 0.25rem 0.6rem;
+ gap: 15px;
+}
+
+.poster-container{
+  width: 20%;
+}
+.poster{
+  width: 100%;
+  height: 100%;
+}
+.poster-details{
+  width: 60%;
+  text-align: left;
+}
+
+.poster-details > h4{
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.poster-details > h6{
+  font-size: 12px;
+  font-weight: 400;
+  color: #0071eb;
+}
+
+.download-gif-container{
+  width: 20%;
+  height: 100%;
+}
+.gif{
+  width: 100%;
+  height: 100%;
+}
+
+.feature3-background-video-container{
+   max-width: 63%;
+   max-height: 47%;
+   z-index: -2;
+   top: 9%;
+   left: 19%;
+}
+
+.Faq-accordian{
+  width: 100%;
+}
+
+.Faq-title{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   padding: 15px 20px;
+   font-size: 18px;
+   background-color: #303030;
+   border: 1px solid #303030;
+   color: white;
+}
+.Ready{
+  padding: 5% 5%;
+    max-width: 450px;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 19px;
+}
+
+.Faq-visible{
+  background-color: #303030;
+  border-top: 1px solid black;
   
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.Faq-visible > p{
+  margin: 1rem ;
+}
+
+.Faq-list-container{
+  border-top: 8px solid #222;
+  padding: 2rem 0;
+
+}
+.Faq-heading{
+  font-size: 25px;
+  text-align: center;
+  font-weight: 600;
+  margin: 1rem 3rem;
+}
+
+.Faq-list{
+  /* padding: 1rem 5rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.Get-started-email-faq{
+  text-align: center;
+}
+
+Get-started-email-faq >h3{
+  font-size: 18px;
+  font-weight:  400;
+  margin: 2rem 0;
+}
+
+.footer{
+  border-top: 8px solid #333;
+  padding: 2rem 1rem;
+  color: #757575;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-row1 >h4{
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.footer-row2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap:20px;
+
+}
+
+.footer-row3 > .dropdown__container{
+  width: fit-content;
+  border: 1px solid #757575 ;
+  color: #757575;
+}
+
+.footer-row3 >.dropdown__container >.language__drop__down{
+  color: #757575;
+}
+
+@media (min-width: 768px) {
+  .hero__bg__image__container {
+    height: 100vh;
+  }
+
+  .hero__bg__overlay {
+    height: 100vh;
+  }
+  .hero__card {
+    top: 40%;
+    left: 30%;
+    transform: translate(-20%, -20%);
+  }
+  .hero__title {
+    font-size: 3rem;
+  }
   .hero__subtitle,
   .hero__description {
-    font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.3rem;
+  }
+  
+  .feature{
+    padding: 4rem;
+  }
+  .feature-title{
+    font-size: 35px;
   }
 
-  .hero__description{
-      margin: 0px 50px;
+  .feature-subtitle{
+    font-size: 20px;
+  }
+
+  .feature2-poster-container{
+    max-width: 26em;
+    height: 85px;
+  }
+
+  .poster-container{
+    width: 15%;
+  }
+
+  .poster-details >h4{
+    font-size: 18px;
+  }
+
+  .poster-details > h6 {
+    font-size: 14px;
+  }
+
+  .download-gif-container{
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .Faq-title{
+    font-size: 20px ;
+  }
+
+  .Faq-heading{
+    font-size: 38px;
+    font-weight: 500;
+    
+  }
+
+  .Faq-list{
+    padding: 1rem 5rem;
+  }
+
+  .Get-started-email-faq{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(15%);
+  }
+
+  .Ready{
+    padding: 5% 2%;
+  }
+}
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 1.8% 5%;
+  }
+
+  .navbar__brand {
+    width: 150px;
+  }
+
+  .signin__button {
+    padding: 7px 17px;
+    font-size: 15px;
+  }
+  .dropdown__container {
+    padding: 6px 7px;
+  }
+  .language__drop__down{
+      font-size: 15px;
+  }
+  .navbar__nav__items {
+    gap: 30px;
+    height: 40px;
+  }
+
+  .hero__card {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .form-container{
+      width: 50%;
   }
   .email-form-container{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      flex-direction: row;
       align-items: center;
-      gap: 15px;
-
-  }
-  .email-input{
-      border: none;
-      background: transparent;
-      width: 100%;
-      height: 100%;
-      padding-left: 7px;
+      gap: 1px;
       
   }
 
-  .form-container{
-      position: relative;
-      background-color: white;
-      width: 90%;
-      height: 50px;
-
-  }
-  
-  .email-label{
-      position: absolute;
-      color: black;
-      left: 2%;
-      top: 28%;
-      color: rgb(153, 149, 149);  
-      transition: 0.5s;
-  }
-  
   .primary-button{
-    background-color: #dc030f;
-    border: 1px solid #dc030f;
-    color: white;
-    padding: 0.8rem 1.2rem;
-    border-radius: 2px;
-    font-size: 16px;
-    letter-spacing: 1px;
+      height: 50px;
+  }
+  
+  /* extra */
+  .feature {
+    /* padding: 4rem; */
+    padding: 2.5rem 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-direction: row;
+  }
+
+  .feature-details{
     
+    text-align: left;
+    padding: 0rem 7rem;
   }
 
-  .email-input:focus + .email-label{
-      top: 0.2rem;
-      font-size: 10px;
+  .feature-subtitle{
+    font-size: 25px;
   }
   
-  .email-input:not(:placeholder-shown).email-input:not(:focus)+.email-label{
-    top: 0.2rem;
-    font-size: 10px;
+  .feature-title{
+    font-size: 46px;
+  }
+  .feature-image-container{
+    max-width: 500px;
   }
 
-  .email-input:focus-visible{
-      outline: none;
+  .feature:nth-child(even){
+    flex-direction: row-reverse;
+  }
+
+  .feature2-poster-container{
+    max-width: 20em;
+    height: 100px;
+    padding: 1rem;
+  }
+
+  .poster-container{
+    width: 20%;
+  }
+
+  .Faq-list{
+    padding: 1rem 25rem;
   }
   
+  .Get-started-email-faq{
+    transform: translateX(16%);
+  }
 
-
-
-  @media (min-width: 768px) {
-    .hero__bg__image__container {
-      height: 100vh;
-    }
-  
-    .hero__bg__overlay {
-      height: 100vh;
-    }
-    .hero__card {
-      top: 40%;
-      left: 30%;
-      transform: translate(-20%, -20%);
-    }
-    .hero__title {
-      font-size: 3rem;
-    }
-    .hero__subtitle,
-    .hero__description {
-      font-size: 1.3rem;
-    }
+  .footer{
+    padding: 2rem 25rem;
+    align-items: flex-start;
+    text-align: left;
+    justify-content: flex-start;
   }
   
-  @media (min-width: 1024px) {
-    .navbar {
-      padding: 1.8% 5%;
-    }
-  
-    .navbar__brand {
-      width: 150px;
-    }
-  
-    .signin__button {
-      padding: 7px 17px;
-      font-size: 15px;
-    }
-    .dropdown__container {
-      padding: 6px 7px;
-    }
-    .language__drop__down{
-        font-size: 15px;
-    }
-    .navbar__nav__items {
-      gap: 30px;
-      height: 40px;
-    }
-  
-    .hero__card {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-    
-    .form-container{
-        width: 50%;
-    }
-    .email-form-container{
-        flex-direction: row;
-        align-items: center;
-        gap: 1px;
-        
-    }
-
-    .primary-button{
-        height: 50px;
-    }
+  .footer-row2{
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: flex-start;
   }
-  
-  @media (min-width: 1254px) {
+  .footer-row1, .footer-row3, .footer-row4{
+    align-items: flex-start;
   }
-  
 
+  .Ready{
+    max-width: 900px;
+  }
+}
 
-  /* flex-direction: column;
-    justify-content: center;
-    align-items: center; */
+@media (min-width: 1254px) {
+
+}

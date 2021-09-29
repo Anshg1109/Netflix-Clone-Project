@@ -7,7 +7,7 @@
 body {
   background-color: black;
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: "'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif";
 }
 
 .navbar {
@@ -44,7 +44,7 @@ body {
 
 .dropdown__container {
   border: 1px solid #aaa;
-  padding: 0.1rem 0.4rem;
+  padding: 0.2rem 0.3rem;
   border-radius: 3px;
   background: rgba(0, 0, 0, 0.507);
 }
@@ -102,11 +102,11 @@ body {
 .hero__subtitle,
 .hero__description {
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .hero__description{
-    margin: 0px 50px;
+    margin: 0px 48px;
 }
 .email-form-container{
     display: flex;
@@ -285,7 +285,7 @@ body {
    color: white;
 }
 .Ready{
-  padding: 5% 5%;
+  padding: 5% 14%;
     max-width: 450px;
     margin: 0 auto;
     font-weight: 400;
@@ -344,9 +344,11 @@ Get-started-email-faq >h3{
   flex-direction: column;
   gap: 20px;
 }
-
+.footer-row1{
+  padding: 0 0 0 30px;
+}
 .footer-row1 >h4{
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
 }
 
@@ -354,10 +356,28 @@ Get-started-email-faq >h3{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap:20px;
-
+  gap:3px;
+  font-size: 14px;
+}
+.column-1{
+  padding: 0 17px;
+}
+.column-2{
+  padding: 0 12px;
+}
+.column-3{
+  padding: 0 0 0 13px;
+}
+.column-4{
+  padding: 0 37px 0 0;
 }
 
+.footer-row2 > div> p{
+  padding: 5px;
+}
+.footer-row3, .footer-row4{
+  padding: 0 0 0 30px;
+}
 .footer-row3 > .dropdown__container{
   width: fit-content;
   border: 1px solid #757575 ;
@@ -473,13 +493,27 @@ Get-started-email-faq >h3{
   }
 
   .hero__card {
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
+    gap: 23px;
+  }
+
+  .hero__title , .hero__subtitle{
+    font-size: 1.7rem;
+  } 
+
+/* here   */
+  .hero__title{
+    font-size: 4rem;
+    line-height: 1.1;
+    margin: 0 auto;
+    max-width: 800px;
   }
   
   .form-container{
-      width: 50%;
+      height: 65px;
+      width: 121%;
   }
   .email-form-container{
       flex-direction: row;
@@ -488,8 +522,14 @@ Get-started-email-faq >h3{
       
   }
 
+  .email-label{
+    top: 35%;
+  }
+
   .primary-button{
-      height: 50px;
+      height: 65px;
+      width: 50%;
+      font-size: 27px;
   }
   
   /* extra */
@@ -560,6 +600,19 @@ Get-started-email-faq >h3{
 
   .Ready{
     max-width: 900px;
+  }
+
+  .ready2{
+    padding: 5% 2% 2% 2%;
+  }
+
+  .email-2{
+    width: 100%;
+    padding: 0px 145px;
+  }
+
+  .button-2{
+    width: 40%;
   }
 }
 
